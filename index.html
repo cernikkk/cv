@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Sharp"
+    />
+<script src="https://kit.fontawesome.com/75e6554cbc.js" crossorigin="anonymous"></script>
+    <title>Jan Cernik CV</title>
+  </head>
+  <body>
+    <div class="page">
+      <div class="print-container">
+        <div class="left-container">
+          <h2>PERFIL</h2>
+            <p>Técnico electrónico con promedio de 9,2.</p>
+              Autodidacta. Entusiasta. Competente.
+              <p>
+                Siempre buscando aprender nuevas habilidades, asumir responsabilidades y crecer en
+                experiencia.
+              </p>
+              <p>Buena disposición para trabajo en equipo.</p>
+          <h2>EDUCACIÓN</h2>
+            <table>
+              <tr>
+                <th>2010-2016</th>
+                <td>Escuela Primaria N°9 D.E. 10 “Evaristo Julio Badia”</td>
+              </tr>
+              <tr>
+                <th>2017-2022</th>
+                <td>Escuela Técnica N°28 D.E. 10 “República Francesa” especialidad electrónica</td>
+              </tr>
+              <tr>
+                <th>2012-2018</th>
+                <td>Inglés: EIA</td>
+              </tr>
+              <tr>
+                <th>2021-2022</th>
+                <td>Estudio particular en desarrollo web Full Stack “The Odin Project”</td>
+              </tr>
+            </table>
+          <h2>IDIOMA</h2>
+          <p>Inglés avanzado (oral y escrito)</p>
+          <h2>HABILIDADES</h2>
+          <ul>
+            <li>Aptitud con la tecnología</li>
+            <li>Programación de páginas web</li>
+            <li>Programación de sistemas embebidos</li>
+            <li>Manejo de Photoshop e Illustrator avanzado</li>
+            <li>Manejo de SparkAR</li>
+            <li>Edición de video</li>
+            <li>Modelado para impresión 3D</li>
+            <li>Conocimientos de fotografía</li>
+          </ul>
+        </div>
+        <div class="right-container">
+          <div>
+            <img src="profile.jpg" alt="profile picture" class="profile" />
+          </div>
+          <div class="right-content">
+            <h1 class="name">Jan Cernik</h1>
+            <p class="ocupation">DESARROLLADOR WEB</p>
+            <h3>CONTACTO</h3>
+            <div class="contact">
+              <div>
+                <i class="fa-brands fa-github"></i>
+                <p>@cernikkk</p>
+              </div>
+              <div>
+                <span class="material-icons-sharp"> call </span>
+                <p>1168172222</p>
+              </div>
+              <div>
+                <span class="material-icons-sharp"> email </span>
+                <p>jancernik12@gmail.com</p>
+              </div>
+              <div>
+                <span class="material-icons-sharp"> location_on </span>
+                <p>Amenábar 3051, CABA</p>
+              </div>
+            </div>
+            <h3>LENGUAJES</h3>
+            <div class="programming-languages">
+              <ul>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>C++</li>
+                <li>C</li>
+                <li>AHK</li>
+                <li>Assembler</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:createPDF()">
+      <span class="material-icons-sharp">
+      file_download
+      </span>
+    </a>
+    <script src="html2pdf.bundle.min.js"></script>
+    <script>
+      const page = document.querySelector(".print-container")
+      function createPDF() {
+        html2pdf(page, opt);
+      }
+      const opt = {
+        margin:       0,
+        filename:     'Jan Cernik - CV.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 4 },
+        jsPDF:        { format: 'a4', orientation: 'portrait' }
+      };
+      console.log("test");
+    </script>
+  </body>
+</html>
